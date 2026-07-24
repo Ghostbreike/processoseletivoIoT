@@ -365,5 +365,5 @@ Em caso de dúvidas:
 - Consulte o material dos cursos EAD
 - Leia atentamente este README
 - Analise os logs das GitHub Actions
-- Utilize os canais oficiais para contato com os instrutores
+- Utilize os canais oficiais para contato com os instrutores.
 
