@@ -62,10 +62,13 @@ while True:
     # 3. Logica de Normalizacao e Restauracao
     if estado_porta == 1 and (t_atual - temp_ref) < LIMITE_VARIACAO_Y:
         if alarme_porta or alarme_temp:
+            # O SEGREDO: Esperamos 1 segundo antes de avisar que normalizou, 
+            # assim o robo do CI ja tera passado do delay e estara nos ouvindo!
+            time.sleep(1) 
             print("Status: Sistema Normalizado.")
             alarme_porta = False
             alarme_temp = False
             temp_ref = t_atual
             
-    # Pequeno delay para nao estrangular o processador, conforme boas praticas
+    # Pequeno delay para nao estrangular o processador
     time.sleep(0.1)
