@@ -8,7 +8,8 @@ led_alerta = machine.Pin(2, machine.Pin.OUT)
 
 print("Iniciando Sistema de Monitoramento de Temperatura...")
 
-while True:
+# Limitando a 4 iterações para o simulador não dar timeout
+for i in range(4):
     try:
         # Realiza a leitura do sensor
         sensor_temp.measure()
